@@ -1,147 +1,47 @@
+#map-content {position:relative;}
+#map-content .tile {position:absolute;}
 
-#dividerItemsTable {
+#dividerItemsTable { width: 70px;}
 
-	width: 70px;
-	
+#helmetIcon { width: 70px;}
+
+#version {
+	position: fixed; bottom: 10px; right: 10px; font-size: 9; color: grey; 
 }
 
-#helmetIcon {
-
-	width: 70px;
-	
+#inventory {
+	position: absolute;	bottom: 10px; left: 5px; font-family: Tahoma; font-size: 10px; color: #FFD700;
+	text-align: center;
 }
-
-
-
-#version
-{
-     position: fixed;
-     bottom: 10px;
-     right: 10px;
-     font-size: 9;
-     color: grey; 
+#stats {
+	top: 10px; left: 5px; font-family: Tahoma; font-size: 15px; text-align: center; 
 }
-
-
-
-#inventory
-{
-     position: absolute;
-     bottom: 10px;
-     left: 5px;
-     font-family: Tahoma;
-     font-size: 10px;
-     color: #FFD700;
-     text-align: center;
-     
+#status {
+	position: absolute; top: 10px; right: 10px; font-family: Tahoma; font-size: 15px; text-align: center;
 }
-
-
-#stats
-{
-     top: 10px;
-     left: 5px;
-     font-family: Tahoma;
-     font-size: 15px;
-     text-align: center;
-     
+#dayOrNightCounter {
+	font-family: Tahoma; font-size: 10px; font-style: italic;
 }
-
-#status
-{
-     position: absolute;
-     top: 10px;
-     right: 10px;
-     font-family: Tahoma;
-     font-size: 15px;
-     text-align: center;
-     
+#turnbutton {
+	position: relative; text-align: center; top: 20px;     
 }
-
-#dayOrNightCounter
-{
-     font-family: Tahoma;
-     font-size: 10px;
-     font-style: italic;
-
+#arrowsCounter {
+	font-family: Tahoma; font-size: 18px; color: #FFD700;
 }
-
-#turnbutton
-{
-     position: relative;
-     text-align: center;
-     top: 20px;     
+#healingPotionsCounter {
+	font-family: Tahoma; font-size: 18px; text-decoration: underline;
 }
+#healingPotionsCounter:hover { color: #A52A2A; }
 
-
-
-#arrowsCounter
-{
-     font-family: Tahoma;
-     font-size: 18px;
-     color: #FFD700;
-     
+#mapContainer {
+	margin: 0 auto; position: relative; top: 20px; border: 0px; width: 1200px; height: 480px; text-align: center;
 }
-
-#healingPotionsCounter
-{
-     font-family: Tahoma;
-     font-size: 18px;
-     text-decoration: underline;
+#canvas {
+	position: relative; text-align: center; border: 0px; padding: 0; margin: 0 auto;
 }
-
-#healingPotionsCounter:hover{
-     color: #A52A2A;
+#player {
+	position: absolute; margin: 15 auto; left: 15px;
 }
-
-
-
-#mapContainer
-{
-    margin: 0 auto;
-    position: relative;
-    top: 20px;
-    border: 0px;
-    width: 1200px;
-    height: 480px;
-    text-align: center;
-}
-
-#canvas
-{
-    position: relative;
-    text-align: center;
-    border: 0px;
-    padding: 0;
-    margin: 0 auto;
-
-}
-
-#player
-{
-    position: absolute;
-    margin: 15 auto;
-    left: 15px;
-
-}
-
-
-
-
-#tile1div
-{
-position: relative;
-}
-
-#tile2div
-{
-position: relative;
-}
-
-#tile3div
-{
-position: relative;
-}
-
-
-
+#tile1div { position: relative; }
+#tile2div { position: relative; }
+#tile3div { position: relative; }

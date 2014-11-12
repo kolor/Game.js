@@ -4,9 +4,8 @@ function testFunction() {
 	alert("It works");
 }
 
-
 $(document).ready(function() {  // plays background music once page loaded
-    $("#backgroundMusic").get(0).play();
+ //   $("#backgroundMusic").get(0).play();
 
 });
 
@@ -66,7 +65,7 @@ $('#turnCounter').html(turn);
 $('#levelCounter').html(playerLevel);
 $('#healingPotionsCounter').html(playerHealingPotions);
 
-$('#tile1div').prepend('<img id="player" src="Pictures/maptiles/player.png" />'); //setting player's icon on the starting tile
+$('#tile1div').prepend('<img id="player" src="img/maptiles/player.png" />'); //setting player's icon on the starting tile
 
 
 function gameOver() { // this is what happens when character dies.
@@ -107,17 +106,17 @@ function gameOver() { // this is what happens when character dies.
 	$('#turnCounter').html(turn);
 	$('#levelCounter').html(playerLevel);
 
-	$('#axeIcon').attr("src", "Pictures/inventory/axe.png");
-	$('#swordIcon').attr("src", "Pictures/inventory/sword.png");
-	$('#woodenBowIcon').attr("src", "Pictures/inventory/woodenbow.png");
-	$('#improvedWoodenBowIcon').attr("src", "Pictures/inventory/improvedwoodenbow.png");
-	$('#leatherArmorIcon').attr("src", "Pictures/inventory/leatherarmor.png");
-	$('#metalArmorIcon').attr("src", "Pictures/inventory/metalarmor.png");
-	$('#woodenShieldIcon').attr("src", "Pictures/inventory/woodenshield.png");
-	$('#metalShieldIcon').attr("src", "Pictures/inventory/metalshield.png");
-	$('#metalHelmetIcon').attr("src", "Pictures/inventory/metalhelmet.png");
-	$('#improvedMetalHelmetIcon').attr("src", "Pictures/inventory/improvedmetalhelmet.png");
-	$("#dayOrNightIcon").attr("src", "Pictures/statusicons/day.png");
+	$('#axeIcon').attr("src", "img/inventory/axe.png");
+	$('#swordIcon').attr("src", "img/inventory/sword.png");
+	$('#woodenBowIcon').attr("src", "img/inventory/woodenbow.png");
+	$('#improvedWoodenBowIcon').attr("src", "img/inventory/improvedwoodenbow.png");
+	$('#leatherArmorIcon').attr("src", "img/inventory/leatherarmor.png");
+	$('#metalArmorIcon').attr("src", "img/inventory/metalarmor.png");
+	$('#woodenShieldIcon').attr("src", "img/inventory/woodenshield.png");
+	$('#metalShieldIcon').attr("src", "img/inventory/metalshield.png");
+	$('#metalHelmetIcon').attr("src", "img/inventory/metalhelmet.png");
+	$('#improvedMetalHelmetIcon').attr("src", "img/inventory/improvedmetalhelmet.png");
+	$("#dayOrNightIcon").attr("src", "img/statusicons/day.png");
 	$("#dayOrNightCounter").html("day");
 
 
@@ -312,11 +311,11 @@ var mountains  = new Image();
 var swamp  = new Image();
 
 
-grass.src='Pictures/maptiles/grass.png';
-forest.src='Pictures/maptiles/forest.png';
-hills.src='Pictures/maptiles/hills.png';
-mountains.src='Pictures/maptiles/mountains.png';
-swamp.src='Pictures/maptiles/swamp.png';
+grass.src='img/maptiles/grass.png';
+forest.src='img/maptiles/forest.png';
+hills.src='img/maptiles/hills.png';
+mountains.src='img/maptiles/mountains.png';
+swamp.src='img/maptiles/swamp.png';
 
 var posX = 0;
 var posY = 0;
@@ -538,11 +537,11 @@ function turnCounter(){
 function dayOrNight(){
 	if (day === 1) {
 		day = 0;
-		$("#dayOrNightIcon").attr("src", "Pictures/statusicons/night.png");
+		$("#dayOrNightIcon").attr("src", "img/statusicons/night.png");
 		$("#dayOrNightCounter").html("night");
 	} else if (day === 0) {
 		day = 1;
-		$("#dayOrNightIcon").attr("src", "Pictures/statusicons/day.png");
+		$("#dayOrNightIcon").attr("src", "img/statusicons/day.png");
 		$("#dayOrNightCounter").html("day");
 	}	
 }
@@ -1037,7 +1036,7 @@ function exploreMetalHelmet() {
 			$('#goldCounter').html(playerGold);
 			hasHelmet = 1;
 			hasMetalHelmet = 1; //CRITICAL
-			$("#metalHelmetIcon").attr("src", "Pictures/inventory/metalhelmet_equipped.png");
+			$("#metalHelmetIcon").attr("src", "img/inventory/metalhelmet_equipped.png");
 			} 
 		}	
 		else {
@@ -1073,7 +1072,7 @@ function exploreImprovedMetalHelmet() {
 			$('#goldCounter').html(playerGold);
 			hasHelmet = 1;
 			hasImprovedMetalHelmet = 1; //CRITICAL
-			$("#improvedMetalHelmetIcon").attr("src", "Pictures/inventory/improvedmetalhelmet_equipped.png");
+			$("#improvedMetalHelmetIcon").attr("src", "img/inventory/improvedmetalhelmet_equipped.png");
 			} 
 		}	
 		else {
@@ -1092,7 +1091,7 @@ function sellMetalHelmet() {
 		$('#goldCounter').html(playerGold);
 		hasHelmet = 0;
 		hasMetalHelmet = 0;
-		$("#metalHelmetIcon").attr("src", "Pictures/inventory/metalhelmet.png");
+		$("#metalHelmetIcon").attr("src", "img/inventory/metalhelmet.png");
 		} else {
 		alert("You have nothing to sell");
 		}
@@ -1108,7 +1107,7 @@ function sellImprovedMetalHelmet() {
 		$('#goldCounter').html(playerGold);
 		hasHelmet = 0;
 		hasImprovedMetalHelmet = 0;
-		$("#improvedMetalHelmetIcon").attr("src", "Pictures/inventory/improvedmetalhelmet.png");
+		$("#improvedMetalHelmetIcon").attr("src", "img/inventory/improvedmetalhelmet.png");
 		} else {
 		alert("You have nothing to sell");
 		}
@@ -1140,7 +1139,7 @@ function exploreLeatherArmor() {
 			$('#goldCounter').html(playerGold);
 			hasArmor = 1;
 			hasLeatherArmor = 1; //CRITICAL
-			$("#leatherArmorIcon").attr("src", "Pictures/inventory/leatherarmor_equipped.png");
+			$("#leatherArmorIcon").attr("src", "img/inventory/leatherarmor_equipped.png");
 			} 
 		}	
 		else {
@@ -1176,7 +1175,7 @@ function exploreMetalArmor() {
 			$('#goldCounter').html(playerGold);
 			hasArmor = 1;
 			hasMetalArmor = 1; //CRITICAL
-			$("#metalArmorIcon").attr("src", "Pictures/inventory/metalarmor_equipped.png");
+			$("#metalArmorIcon").attr("src", "img/inventory/metalarmor_equipped.png");
 			} 
 		}	
 		else {
@@ -1198,7 +1197,7 @@ function sellLeatherArmor() {  // FINISH THIS
 		$('#goldCounter').html(playerGold);
 		hasArmor = 0;
 		hasLeatherArmor = 0;
-		$("#leatherArmorIcon").attr("src", "Pictures/inventory/leatherarmor.png");
+		$("#leatherArmorIcon").attr("src", "img/inventory/leatherarmor.png");
 		} else {
 		alert("You have nothing to sell");
 		}
@@ -1213,7 +1212,7 @@ function sellMetalArmor() {  // FINISH THIS
 		$('#goldCounter').html(playerGold);
 		hasArmor = 0;
 		hasMetalArmor = 0;
-		$("#metalArmorIcon").attr("src", "Pictures/inventory/metalarmor.png");
+		$("#metalArmorIcon").attr("src", "img/inventory/metalarmor.png");
 		} else {
 		alert("You have nothing to sell");
 		}
@@ -1245,7 +1244,7 @@ function exploreAxe() {
 			$('#goldCounter').html(playerGold);
 			hasWeapon = 1;
 			hasAxe = 1; //CRITICAL
-			$("#axeIcon").attr("src", "Pictures/inventory/axe_equipped.png");
+			$("#axeIcon").attr("src", "img/inventory/axe_equipped.png");
 			} 
 		}	
 		else {
@@ -1281,7 +1280,7 @@ function exploreSword() {
 			$('#goldCounter').html(playerGold);
 			hasWeapon = 1;
 			hasSword = 1; //CRITICAL
-			$("#swordIcon").attr("src", "Pictures/inventory/sword_equipped.png");
+			$("#swordIcon").attr("src", "img/inventory/sword_equipped.png");
 			} 
 		}	
 		else {
@@ -1301,7 +1300,7 @@ function sellSword() {
 		$('#goldCounter').html(playerGold);
 		hasWeapon = 0;
 		hasSword = 0; //CRITICAL
-		$("#swordIcon").attr("src", "Pictures/inventory/sword.png");
+		$("#swordIcon").attr("src", "img/inventory/sword.png");
 
 		} else {
 		alert("You have nothing to sell");
@@ -1318,7 +1317,7 @@ function sellAxe() { // FINISH THIS
 		$('#goldCounter').html(playerGold);
 		hasWeapon = 0;
 		hasAxe = 0; //CRITICAL
-		$("#axeIcon").attr("src", "Pictures/inventory/axe.png");
+		$("#axeIcon").attr("src", "img/inventory/axe.png");
 
 		} else {
 		alert("You have nothing to sell");
@@ -1352,7 +1351,7 @@ function exploreWoodenShield() {
 			$('#goldCounter').html(playerGold);
 			hasShield = 1;
 			hasWoodenShield = 1; //CRITICAL
-			$("#woodenShieldIcon").attr("src", "Pictures/inventory/woodenshield_equipped.png");
+			$("#woodenShieldIcon").attr("src", "img/inventory/woodenshield_equipped.png");
 			} 
 		}	
 		else {
@@ -1388,7 +1387,7 @@ function exploreMetalShield() {
 			$('#goldCounter').html(playerGold);
 			hasShield = 1;
 			hasMetalShield = 1;
-			$("#metalShieldIcon").attr("src", "Pictures/inventory/metalshield_equipped.png");
+			$("#metalShieldIcon").attr("src", "img/inventory/metalshield_equipped.png");
 			} 
 		}
 		else {
@@ -1410,7 +1409,7 @@ function sellWoodenShield() {
 		$('#goldCounter').html(playerGold);
 		hasShield = 0;
 		hasWoodenShield = 0; // CRITICAL
-		$("#woodenShieldIcon").attr("src", "Pictures/inventory/woodenshield.png");
+		$("#woodenShieldIcon").attr("src", "img/inventory/woodenshield.png");
 		} else {
 		alert("You have nothing to sell");
 		}
@@ -1425,7 +1424,7 @@ function sellMetalShield() {
 		$('#goldCounter').html(playerGold);
 		hasShield = 0;
 		hasMetalShield = 0; //CRITICAL
-		$("#metalShieldIcon").attr("src", "Pictures/inventory/metalshield.png");
+		$("#metalShieldIcon").attr("src", "img/inventory/metalshield.png");
 
 		} else {
 		alert("You have nothing to sell");
@@ -1451,7 +1450,7 @@ function exploreWoodenBow() {
 			$('#goldCounter').html(playerGold);
 			hasBow = 1;
 			hasWoodenBow = 1;
-			$("#woodenBowIcon").attr("src", "Pictures/inventory/woodenbow_equipped.png");
+			$("#woodenBowIcon").attr("src", "img/inventory/woodenbow_equipped.png");
 			arrowDamageBonus = arrowDamageBonus + woodenBowDamageBonus;
 			console.log(arrowDamageBonus);
 			} 
@@ -1480,7 +1479,7 @@ function exploreImprovedWoodenBow() {
 			$('#goldCounter').html(playerGold);
 			hasBow = 1;
 			hasImprovedWoodenBow = 1;
-			$("#improvedWoodenBowIcon").attr("src", "Pictures/inventory/improvedwoodenbow_equipped.png");
+			$("#improvedWoodenBowIcon").attr("src", "img/inventory/improvedwoodenbow_equipped.png");
 			arrowDamageBonus = arrowDamageBonus + improvedWoodenBowDamageBonus;
 			console.log(arrowDamageBonus);
 			} 
@@ -1498,7 +1497,7 @@ function sellWoodenBow() {
 		$('#goldCounter').html(playerGold);
 		hasBow = 0;
 		hasWoodenBow = 0; // CRITICAL
-		$("#woodenBowIcon").attr("src", "Pictures/inventory/woodenbow.png");
+		$("#woodenBowIcon").attr("src", "img/inventory/woodenbow.png");
 		arrowDamageBonus = arrowDamageBonus - woodenBowDamageBonus;
 		console.log(arrowDamageBonus);
 		} else {
@@ -1513,7 +1512,7 @@ function sellImprovedWoodenBow() {
 		$('#goldCounter').html(playerGold);
 		hasBow = 0;
 		hasImprovedWoodenBow = 0; // CRITICAL
-		$("#improvedWoodenBowIcon").attr("src", "Pictures/inventory/improvedwoodenbow.png");
+		$("#improvedWoodenBowIcon").attr("src", "img/inventory/improvedwoodenbow.png");
 		arrowDamageBonus = arrowDamageBonus - improvedWoodenBowDamageBonus;
 		console.log(arrowDamageBonus);
 		} else {

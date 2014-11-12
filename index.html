@@ -2,41 +2,41 @@
 	<HEAD>
 		<meta charset="utf-8">
 		<TITLE>Adventures in Vadimaria</TITLE>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="stylesheet" type="text/css" href="jquery-ui.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
 	</HEAD>
-<BODY background="Pictures/background.jpg">
+<BODY background="img/background.jpg">
 
 
-<!-- <audio id="backgroundMusic" src="Sounds/backgroundmusic.mp3" loop="loop"></audio> -->
-<audio id="purchase" src="Sounds/purchase.mp3"></audio>
-<audio id="sell" src="Sounds/sell.mp3"></audio>
-<audio id="onecoinfound" src="Sounds/onecoinfound.mp3"></audio>
-<audio id="coinsfound" src="Sounds/coinsfound.mp3"></audio>
-<audio id="levelup" src="Sounds/levelup.wav"></audio>
-<audio id="peasants" src="Sounds/peasants.mp3"></audio>
-<audio id="peasants_defeated" src="Sounds/peasants_defeated.mp3"></audio>
-<audio id="arrow_hit_target" src="Sounds/arrow_hit_target.mp3"></audio>
-<audio id="spirit" src="Sounds/spirit.mp3"></audio>
-<audio id="wolves" src="Sounds/wolves.mp3"></audio>
-<audio id="dragon" src="Sounds/dragon.mp3"></audio>
-<audio id="swordfight_1" src="Sounds/swordfight_1.mp3"></audio>
-<audio id="swordfight_2" src="Sounds/swordfight_2.mp3"></audio>
-<audio id="swordfight_3" src="Sounds/swordfight_3.mp3"></audio>
-<audio id="gulp" src="Sounds/gulp.mp3"></audio>
+<!-- <audio id="backgroundMusic" src="snd/backgroundmusic.mp3" loop="loop"></audio> -->
+<audio id="purchase" src="snd/purchase.mp3"></audio>
+<audio id="sell" src="snd/sell.mp3"></audio>
+<audio id="onecoinfound" src="snd/onecoinfound.mp3"></audio>
+<audio id="coinsfound" src="snd/coinsfound.mp3"></audio>
+<audio id="levelup" src="snd/levelup.wav"></audio>
+<audio id="peasants" src="snd/peasants.mp3"></audio>
+<audio id="peasants_defeated" src="snd/peasants_defeated.mp3"></audio>
+<audio id="arrow_hit_target" src="snd/arrow_hit_target.mp3"></audio>
+<audio id="spirit" src="snd/spirit.mp3"></audio>
+<audio id="wolves" src="snd/wolves.mp3"></audio>
+<audio id="dragon" src="snd/dragon.mp3"></audio>
+<audio id="swordfight_1" src="snd/swordfight_1.mp3"></audio>
+<audio id="swordfight_2" src="snd/swordfight_2.mp3"></audio>
+<audio id="swordfight_3" src="snd/swordfight_3.mp3"></audio>
+<audio id="gulp" src="snd/gulp.mp3"></audio>
 
 
 
 <div>
 <table id="stats" border="0">
 	<tr>
-		<td width="10%" align="center"><img src="Pictures/statsIcons/level.png" width="40" height="30" title="Progress"></td>
-		<td width="10%" align="center"><img src="Pictures/statsIcons/health.png" width="40" height="30" title="Health"></td>
-		<td width="10%" align="center"><img src="Pictures/statsIcons/gold.png" width="50" height="25" title="Gold"></td> 
-		<td width="10%" align="center"><img src="Pictures/statsIcons/experience.png" width="50" height="40" title="Experience"></td>
-		<td width="10%" align="center"><img src="Pictures/statsIcons/attack.png" width="40" height="30" title="Attack bonus"></td>
-		<td width="10%" align="center"><img src="Pictures/statsIcons/defense.png" width="40" height="30" title="Defense bonus"></td>
-		<td width="10%" align="center"><img src="Pictures/statsIcons/luck.png" width="35" height="30" title="Luck bonus"></td>
+		<td width="10%" align="center"><img src="img/statsIcons/level.png" width="40" height="30" title="Progress"></td>
+		<td width="10%" align="center"><img src="img/statsIcons/health.png" width="40" height="30" title="Health"></td>
+		<td width="10%" align="center"><img src="img/statsIcons/gold.png" width="50" height="25" title="Gold"></td> 
+		<td width="10%" align="center"><img src="img/statsIcons/experience.png" width="50" height="40" title="Experience"></td>
+		<td width="10%" align="center"><img src="img/statsIcons/attack.png" width="40" height="30" title="Attack bonus"></td>
+		<td width="10%" align="center"><img src="img/statsIcons/defense.png" width="40" height="30" title="Defense bonus"></td>
+		<td width="10%" align="center"><img src="img/statsIcons/luck.png" width="35" height="30" title="Luck bonus"></td>
 		
 	</tr>
 	<tr>
@@ -54,7 +54,7 @@
 <div id="status">
 <table id="stats_table" border="0">
 	<tr>
-		<td><div align="center" title="Enemies are more dangerous at night"><img id="dayOrNightIcon" src="Pictures/statusicons/day.png"><div></td>
+		<td><div align="center" title="Enemies are more dangerous at night"><img id="dayOrNightIcon" src="img/statusicons/day.png"><div></td>
 		<td width="15"></td>
 		<td align="center">Turn</td>
 	</tr>
@@ -74,20 +74,17 @@
 </div>
 <br />
 <br />
-<!-- <div id="mapContainer"> -->
-<canvas id="canvas" height="480px" width="1200px"></canvas>
-<!-- </div> -->
-
+<div id="map-content"></div>
 
 <div>
 <table id="inventory" border="0">
 	<tr>
-		<td bgcolor="#A52A2A"><input type="image" id="swordIcon" width="50" height="50" title="Sword. +2 Attack bonus" src="Pictures/inventory/sword.png" onclick="exploreSword();"></td> 
-		<td bgcolor="#A52A2A"><input type="image" id="improvedWoodenBowIcon" width="50" height="50" title="Improved wooden bow. +1 to arrows damage" src="Pictures/inventory/improvedwoodenbow.png" onclick="exploreImprovedWoodenBow();"></td> 
+		<td bgcolor="#A52A2A"><input type="image" id="swordIcon" width="50" height="50" title="Sword. +2 Attack bonus" src="img/inventory/sword.png" onclick="exploreSword();"></td> 
+		<td bgcolor="#A52A2A"><input type="image" id="improvedWoodenBowIcon" width="50" height="50" title="Improved wooden bow. +1 to arrows damage" src="img/inventory/improvedwoodenbow.png" onclick="exploreImprovedWoodenBow();"></td> 
 		<td width = "10px"></td>
-		<td bgcolor="#A52A2A"><input type="image" id="metalShieldIcon" width="50" height="50" title="Metal shield. +2 Defense bonus" src="Pictures/inventory/metalshield.png" onclick="exploreMetalShield();"></td> 
-		<td bgcolor="#A52A2A"><input type="image" id="metalArmorIcon" width="50" height="50" title="Metal armor. +2 Defense bonus" src="Pictures/inventory/metalarmor.png" onclick="exploreMetalArmor();"></td> 
-		<td bgcolor="#A52A2A"><input type="image" id="improvedMetalHelmetIcon" width="50" height="50" title="Improved metal helmet. +2 Defense bonus" src="Pictures/inventory/improvedmetalhelmet.png" onclick="exploreImprovedMetalHelmet();"></td> 
+		<td bgcolor="#A52A2A"><input type="image" id="metalShieldIcon" width="50" height="50" title="Metal shield. +2 Defense bonus" src="img/inventory/metalshield.png" onclick="exploreMetalShield();"></td> 
+		<td bgcolor="#A52A2A"><input type="image" id="metalArmorIcon" width="50" height="50" title="Metal armor. +2 Defense bonus" src="img/inventory/metalarmor.png" onclick="exploreMetalArmor();"></td> 
+		<td bgcolor="#A52A2A"><input type="image" id="improvedMetalHelmetIcon" width="50" height="50" title="Improved metal helmet. +2 Defense bonus" src="img/inventory/improvedmetalhelmet.png" onclick="exploreImprovedMetalHelmet();"></td> 
 		<td width="10"></td>
 		<td></td> <!-- here can paste another icon of potion -->
 		<td></td>
@@ -118,18 +115,18 @@
 		
 	</tr>
 	<tr>
-		<td bgcolor="#A52A2A"><input type="image" id="axeIcon" width="50" height="50" title="Axe. +1 Attack bonus" src="Pictures/inventory/axe.png" onclick="exploreAxe();" / ></td> 
-		<td bgcolor="#A52A2A"><input type="image" id="woodenBowIcon" width="50" height="50" title="Wooden bow. Allows to shoot arrows" src="Pictures/inventory/woodenbow.png" onclick="exploreWoodenBow();" / ></td> 
+		<td bgcolor="#A52A2A"><input type="image" id="axeIcon" width="50" height="50" title="Axe. +1 Attack bonus" src="img/inventory/axe.png" onclick="exploreAxe();" / ></td> 
+		<td bgcolor="#A52A2A"><input type="image" id="woodenBowIcon" width="50" height="50" title="Wooden bow. Allows to shoot arrows" src="img/inventory/woodenbow.png" onclick="exploreWoodenBow();" / ></td> 
 		<td></td>
-		<td bgcolor="#A52A2A"><input type="image" id="woodenShieldIcon" width="50" height="50" title="Wodden shield. +1 Defense bonus" src="Pictures/inventory/woodenshield.png" onclick="exploreWoodenShield();" / ></td> 
-		<td bgcolor="#A52A2A"><input type="image" id="leatherArmorIcon" width="50" height="50" title="Leather armor. +1 Defense bonus" src="Pictures/inventory/leatherarmor.png" onclick="exploreLeatherArmor();" / ></td> 
-		<td bgcolor="#A52A2A"><input type="image" id="metalHelmetIcon" width="50" height="50" title="Metal helmet. +1 Defense bonus" src="Pictures/inventory/metalhelmet.png" onclick="exploreMetalHelmet();" / ></td> 
+		<td bgcolor="#A52A2A"><input type="image" id="woodenShieldIcon" width="50" height="50" title="Wodden shield. +1 Defense bonus" src="img/inventory/woodenshield.png" onclick="exploreWoodenShield();" / ></td> 
+		<td bgcolor="#A52A2A"><input type="image" id="leatherArmorIcon" width="50" height="50" title="Leather armor. +1 Defense bonus" src="img/inventory/leatherarmor.png" onclick="exploreLeatherArmor();" / ></td> 
+		<td bgcolor="#A52A2A"><input type="image" id="metalHelmetIcon" width="50" height="50" title="Metal helmet. +1 Defense bonus" src="img/inventory/metalhelmet.png" onclick="exploreMetalHelmet();" / ></td> 
 		<td width="10"></td>
-		<td bgcolor="#A52A2A"><input type="image" id="healingPotionIcon" width="50" height="50" title="Healing potion. Restores 10 Health" src="Pictures/inventory/healingpotion.png" onclick="purchaseHealingPotion();" / ></td> 
+		<td bgcolor="#A52A2A"><input type="image" id="healingPotionIcon" width="50" height="50" title="Healing potion. Restores 10 Health" src="img/inventory/healingpotion.png" onclick="purchaseHealingPotion();" / ></td> 
 		<td>x</td>
 		<td><div id="healingPotionsCounter" onclick="addHealthFromHealingPotion();" title="Use the potion to restore some health"></div></td> <!-- count of potions available -->
 		<td width="10"></td> 
-		<td bgcolor="#A52A2A"><input type="image" id="arrowsIcon" width="50" height="50" title="Arrows. Deal 5 damage, require a bow to be fired" src="Pictures/inventory/arrows.png" onclick="purchaseArrow();" / ></td> 
+		<td bgcolor="#A52A2A"><input type="image" id="arrowsIcon" width="50" height="50" title="Arrows. Deal 5 damage, require a bow to be fired" src="img/inventory/arrows.png" onclick="purchaseArrow();" / ></td> 
 		<td>x</td>
 		<td><div id="arrowsCounter"></div></td> <!-- count of arrows available -->
 
@@ -155,9 +152,10 @@
 
 <div id="version">v 3.0.0</div>
 
-<script type="text/javascript" src="jquery-ui.min.js"></script>
-<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="code.js"></script>
+<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/Map.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
 
 
 </BODY>
