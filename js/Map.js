@@ -1,5 +1,6 @@
 
 function Tile(rnd, px, py) {
+    var self = this;
     var _types = ["grass","forest","hills","swamp","forest"];
    
     var height = 60;
@@ -14,10 +15,16 @@ function Tile(rnd, px, py) {
 
     this.Draw = function() {
         var div = $("<div class='tile'></div>");
-        div.attr('id',id).data('type',type);
-        div.css({width:width, height:height, top:height*y, left:width*x});
+        div.attr('id',id).data('type',type).data('x',x).data('y',y);
+        div.get(0).tile = self;
+        div.css({top:height*y, left:width*x});
         div.css({"background":"url('"+img+"')"});
         div.appendTo('#map-content');
+    };
+
+
+    this.Alert = function() {
+        console.log("tile id:"+id+" was clicked");
     };
 
 }
@@ -36,6 +43,7 @@ var Map = new function() {
         }  
 
         Render();
+        Setup();
     };
 
     this.GetMap = function() {
@@ -49,6 +57,13 @@ var Map = new function() {
             });
         });
     };
+
+    var Setup = function(){
+        $('#map-content').on('click','div.tile', function(e){
+             //var tile = tiles[$(this).data('y')][$(this).data('x')];
+             this.tile.Alert();
+        });
+    }
 
     this.Redraw = function(x,y) {
 
